@@ -5,28 +5,25 @@
     
     <title>Kai&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="title: AWS系列之IAM最近一段时间一直在学习AWS相关的东西，近两周把IAM（Identity and Access Management）的文档过了一遍, 现在总结一下学到的东西。
-##理论
-###IAM定义：1IAM controls who (authentication) can do what (authorization) in your AWS account.
+    <meta name="description" content="AWS系列之IAM最近一段时间一直在学习AWS相关的东西，近两周把IAM（Identity and Access Management）的文档过了一遍, 现在总结一下学到的东西。
+理论IAM定义:1IAM controls who (authentication) can do what (authorization) in your AWS account.
 
-其实，">
+其实，这就和Linux的权限系统">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Kai's Blog">
 <meta property="og:url" content="http://yoursite.com/2016/06/15/AWS之IAM/index.html">
 <meta property="og:site_name" content="Kai's Blog">
-<meta property="og:description" content="title: AWS系列之IAM最近一段时间一直在学习AWS相关的东西，近两周把IAM（Identity and Access Management）的文档过了一遍, 现在总结一下学到的东西。
-##理论
-###IAM定义：1IAM controls who (authentication) can do what (authorization) in your AWS account.
+<meta property="og:description" content="AWS系列之IAM最近一段时间一直在学习AWS相关的东西，近两周把IAM（Identity and Access Management）的文档过了一遍, 现在总结一下学到的东西。
+理论IAM定义:1IAM controls who (authentication) can do what (authorization) in your AWS account.
 
-其实，">
-<meta property="og:updated_time" content="2016-06-15T07:29:59.000Z">
+其实，这就和Linux的权限系统">
+<meta property="og:updated_time" content="2016-06-15T07:44:02.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kai's Blog">
-<meta name="twitter:description" content="title: AWS系列之IAM最近一段时间一直在学习AWS相关的东西，近两周把IAM（Identity and Access Management）的文档过了一遍, 现在总结一下学到的东西。
-##理论
-###IAM定义：1IAM controls who (authentication) can do what (authorization) in your AWS account.
+<meta name="twitter:description" content="AWS系列之IAM最近一段时间一直在学习AWS相关的东西，近两周把IAM（Identity and Access Management）的文档过了一遍, 现在总结一下学到的东西。
+理论IAM定义:1IAM controls who (authentication) can do what (authorization) in your AWS account.
 
-其实，">
+其实，这就和Linux的权限系统">
     
 
     
@@ -76,7 +73,7 @@
                 <nav id="sub-nav">
                     <div class="profile" id="profile-nav">
                         <a id="profile-anchor" href="javascript:;">
-                            <img class="avatar" src="/css/images/avatar.png" />
+                            <img class="avatar" src="/" />
                             <i class="fa fa-caret-down"></i>
                         </a>
                     </div>
@@ -154,11 +151,11 @@
 <aside id="profile">
     <div class="inner profile-inner">
         <div class="base-info profile-block">
-            <img id="avatar" src="/css/images/avatar.png" />
-            <h2 id="name">PPOffice</h2>
-            <h3 id="title">Web Developer</h3>
+            <img id="avatar" src="/" />
+            <h2 id="name">Hu Kai</h2>
+            <h3 id="title">Developer</h3>
             <span id="location"><i class="fa fa-map-marker"></i>Chengdu, China</span>
-            <a id="follow" target="_blank" href="https://github.com/ppoffice/">FOLLOW</a>
+            <a id="follow" target="_blank" href="https://github.com/WrongKey/">FOLLOW</a>
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
@@ -177,7 +174,7 @@
                     
                     
                     <td>
-                        <a href="http://github.com/ppoffice/hexo-theme-icarus" target="_blank" title="github" class=tooltip>
+                        <a href="https://github.com/WrongKey/" target="_blank" title="github" class=tooltip>
                             <i class="fa fa-github"></i>
                         </a>
                     </td>
@@ -223,13 +220,12 @@
         
             
             <hr>
-<h2 id="title-AWS系列之IAM"><a href="#title-AWS系列之IAM" class="headerlink" title="title: AWS系列之IAM"></a>title: AWS系列之IAM</h2><p>最近一段时间一直在学习AWS相关的东西，近两周把<a href="http://docs.aws.amazon.com/zh_cn/IAM/latest/UserGuide/introduction.html" target="_blank" rel="external">IAM</a>（Identity and Access Management）的文档过了一遍, 现在总结一下学到的东西。</p>
-<p>##理论</p>
-<p>###IAM定义：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IAM controls who (authentication) can do what (authorization) in your AWS account.</span><br></pre></td></tr></table></figure></p>
+<h2 id="AWS系列之IAM"><a href="#AWS系列之IAM" class="headerlink" title="AWS系列之IAM"></a>AWS系列之IAM</h2><p>最近一段时间一直在学习AWS相关的东西，近两周把<a href="http://docs.aws.amazon.com/zh_cn/IAM/latest/UserGuide/introduction.html" target="_blank" rel="external">IAM</a>（Identity and Access Management）的文档过了一遍, 现在总结一下学到的东西。</p>
+<h2 id="理论"><a href="#理论" class="headerlink" title="理论"></a>理论</h2><h3 id="IAM定义"><a href="#IAM定义" class="headerlink" title="IAM定义:"></a>IAM定义:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IAM controls who (authentication) can do what (authorization) in your AWS account.</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>其实，这就和Linux的权限系统很相似，只是将对文件系统的操作换成了对AWS上的资源的操作。我们在注册成为AWS用户时所使用的账户就是就是我们根账户， 根账户就如同Linux上的root用户，对该用户在AWS上的资源拥有所有的操作权限。我们一般不建议使用跟账户去对AWS上的资源进行操作。</p>
 </blockquote>
-<p>###IAM能够做什么<br>试想一下，有这样一个组织，这个组织当中的所有人都使用同一个AWS账户下的资源，并且都使用根用户对AWS上的资源进行操作，这样会面临什么样的问题呢？</p>
+<h3 id="IAM能够做什么"><a href="#IAM能够做什么" class="headerlink" title="IAM能够做什么"></a>IAM能够做什么</h3><p>试想一下，有这样一个组织，这个组织当中的所有人都使用同一个AWS账户下的资源，并且都使用根用户对AWS上的资源进行操作，这样会面临什么样的问题呢？</p>
 <blockquote>
 <p>其实这种做法带来的最直接也是最严重的问题就是<em>安全</em>方面的问题，数据的安全，应用服务器的安全，这些安全问题可能来自于错误的操作，也可能来自于恶意的破坏。</p>
 </blockquote>
@@ -252,7 +248,7 @@
 </li>
 </ul>
 <p><em>很重要的一点是IAM服务是作为你AWS账户的一个可以免费使用的功能。</em></p>
-<p>你可以通过AWS 管理控制台（UI），命令行工具（aws cli）, 软件开发工具包(sdk 编程式)以及HTTPS API 使用IAM服务。</p>
+<p>你可以通过AWS 管理控制台（UI），命令行工具（aws cli）, 软件开发工具包 (sdk 编程式) 以及HTTPS API 使用IAM服务。</p>
 
         
         </div>
@@ -263,7 +259,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/06/15/AWS之IAM/" data-id="cipgkccfp0000q9x24papag7e" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+    <a data-url="http://yoursite.com/2016/06/15/AWS之IAM/" data-id="cipgkvz8l0000vkx26e3p877d" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
