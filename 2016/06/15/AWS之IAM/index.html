@@ -3,21 +3,30 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Hello World | Kai&#39;s Blog</title>
+    <title>Kai&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+    <meta name="description" content="title: AWS系列之IAM最近一段时间一直在学习AWS相关的东西，近两周把IAM（Identity and Access Management）的文档过了一遍, 现在总结一下学到的东西。
+##理论
+###IAM定义：1IAM controls who (authentication) can do what (authorization) in your AWS account.
+
+其实，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2016/06/14/hello-world/index.html">
+<meta property="og:title" content="Kai's Blog">
+<meta property="og:url" content="http://yoursite.com/2016/06/15/AWS之IAM/index.html">
 <meta property="og:site_name" content="Kai's Blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2016-06-14T15:27:12.000Z">
+<meta property="og:description" content="title: AWS系列之IAM最近一段时间一直在学习AWS相关的东西，近两周把IAM（Identity and Access Management）的文档过了一遍, 现在总结一下学到的东西。
+##理论
+###IAM定义：1IAM controls who (authentication) can do what (authorization) in your AWS account.
+
+其实，">
+<meta property="og:updated_time" content="2016-06-15T07:29:59.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="Kai's Blog">
+<meta name="twitter:description" content="title: AWS系列之IAM最近一段时间一直在学习AWS相关的东西，近两周把IAM（Identity and Access Management）的文档过了一遍, 现在总结一下学到的东西。
+##理论
+###IAM定义：1IAM controls who (authentication) can do what (authorization) in your AWS account.
+
+其实，">
     
 
     
@@ -205,46 +214,45 @@ Quick">
 </aside>
 
             
-            <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-AWS之IAM" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
         
-            <header class="article-header">
-                
-    
-        <h1 class="article-title" itemprop="name">
-            Hello World
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2016/06/14/hello-world/">
-            <time datetime="2016-06-14T15:27:12.000Z" itemprop="datePublished">2016-06-14</time>
-        </a>
-    </div>
-
-
-                    
-                    
-                </div>
-            </header>
-        
         <div class="article-entry" itemprop="articleBody">
         
             
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+            <hr>
+<h2 id="title-AWS系列之IAM"><a href="#title-AWS系列之IAM" class="headerlink" title="title: AWS系列之IAM"></a>title: AWS系列之IAM</h2><p>最近一段时间一直在学习AWS相关的东西，近两周把<a href="http://docs.aws.amazon.com/zh_cn/IAM/latest/UserGuide/introduction.html" target="_blank" rel="external">IAM</a>（Identity and Access Management）的文档过了一遍, 现在总结一下学到的东西。</p>
+<p>##理论</p>
+<p>###IAM定义：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IAM controls who (authentication) can do what (authorization) in your AWS account.</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>其实，这就和Linux的权限系统很相似，只是将对文件系统的操作换成了对AWS上的资源的操作。我们在注册成为AWS用户时所使用的账户就是就是我们根账户， 根账户就如同Linux上的root用户，对该用户在AWS上的资源拥有所有的操作权限。我们一般不建议使用跟账户去对AWS上的资源进行操作。</p>
+</blockquote>
+<p>###IAM能够做什么<br>试想一下，有这样一个组织，这个组织当中的所有人都使用同一个AWS账户下的资源，并且都使用根用户对AWS上的资源进行操作，这样会面临什么样的问题呢？</p>
+<blockquote>
+<p>其实这种做法带来的最直接也是最严重的问题就是<em>安全</em>方面的问题，数据的安全，应用服务器的安全，这些安全问题可能来自于错误的操作，也可能来自于恶意的破坏。</p>
+</blockquote>
+<p>让我们来看看IAM为我们提供了哪些功能：</p>
+<ul>
+<li><p>对你 AWS 账户的共享访问权限</p>
+<blockquote>
+<p>可以向其他人员授予管理和使用您 AWS 账户中的资源的权限，而不必共享你的密码或访问密钥。</p>
+</blockquote>
+</li>
+<li><p>精细化权限</p>
+<blockquote>
+<p>可以针对不同资源向不同人员授予不同权限。</p>
+</blockquote>
+</li>
+<li><p>与很多的AWS服务集成</p>
+<blockquote>
+<p>可以控制 Amazon EC2 上运行的应用程序针对 AWS 资源的安全访问权限。</p>
+</blockquote>
+</li>
+</ul>
+<p><em>很重要的一点是IAM服务是作为你AWS账户的一个可以免费使用的功能。</em></p>
+<p>你可以通过AWS 管理控制台（UI），命令行工具（aws cli）, 软件开发工具包(sdk 编程式)以及HTTPS API 使用IAM服务。</p>
 
         
         </div>
@@ -255,7 +263,7 @@ Quick">
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/06/14/hello-world/" data-id="cipg66onz00004nx2edhsau12" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://yoursite.com/2016/06/15/AWS之IAM/" data-id="cipgfwnrs0000hax2vmhxqd7d" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -323,7 +331,7 @@ Quick">
 
             
     
-        <a href="http://yoursite.com/2016/06/14/hello-world/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/06/14/hello-world/">Comentarios</a>
+        <a href="http://yoursite.com/2016/06/15/AWS之IAM/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/06/15/AWS之IAM/">Comentarios</a>
     
 
         </footer>
@@ -332,15 +340,11 @@ Quick">
         
 <nav id="article-nav">
     
-        <a href="/2016/06/15/AWS之IAM/" id="article-nav-newer" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Más nuevo</strong>
-            <div class="article-nav-title">
-                
-                    (no title)
-                
-            </div>
-        </a>
     
+        <a href="/2016/06/14/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más viejo</strong>
+            <div class="article-nav-title">Hello World</div>
+        </a>
     
 </nav>
 
@@ -462,7 +466,7 @@ Quick">
     var disqus_shortname = 'hexo-theme-icarus';
     
     
-    var disqus_url = 'http://yoursite.com/2016/06/14/hello-world/';
+    var disqus_url = 'http://yoursite.com/2016/06/15/AWS之IAM/';
     
     (function() {
     var dsq = document.createElement('script');
