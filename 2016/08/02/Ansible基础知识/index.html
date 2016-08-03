@@ -5,15 +5,54 @@
     
     <title>Kai&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="我的技术博客">
-<meta property="og:type" content="website">
+    <meta name="description" content="DEVOPS 工具篇之Ansible基础篇
+关于自动化配置工具使用传统方式(shell/bat)管理多主机集群存在的问题
+难以复用和维护
+极易出错，差异性难以避免
+对人的依赖性大
+逐步复杂，可读性有限
+不可跨平台
+对管理、运行人员要求高
+
+自动化配置管理带来的好处
+使用第三方工具，支持跨平台。
+专有的DSL，更高的可读性，可重用性高，可审查性高。
+高效的集群操作，易于管理，保证集群环境的一致性。">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Kai's Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2016/08/02/Ansible基础知识/index.html">
 <meta property="og:site_name" content="Kai's Blog">
-<meta property="og:description" content="我的技术博客">
+<meta property="og:description" content="DEVOPS 工具篇之Ansible基础篇
+关于自动化配置工具使用传统方式(shell/bat)管理多主机集群存在的问题
+难以复用和维护
+极易出错，差异性难以避免
+对人的依赖性大
+逐步复杂，可读性有限
+不可跨平台
+对管理、运行人员要求高
+
+自动化配置管理带来的好处
+使用第三方工具，支持跨平台。
+专有的DSL，更高的可读性，可重用性高，可审查性高。
+高效的集群操作，易于管理，保证集群环境的一致性。">
+<meta property="og:image" content="https://s3.amazonaws.com/media-p.slid.es/uploads/111493/images/1870599/ansible_logo.png">
+<meta property="og:updated_time" content="2016-08-03T08:19:51.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Kai's Blog">
-<meta name="twitter:description" content="我的技术博客">
+<meta name="twitter:description" content="DEVOPS 工具篇之Ansible基础篇
+关于自动化配置工具使用传统方式(shell/bat)管理多主机集群存在的问题
+难以复用和维护
+极易出错，差异性难以避免
+对人的依赖性大
+逐步复杂，可读性有限
+不可跨平台
+对管理、运行人员要求高
+
+自动化配置管理带来的好处
+使用第三方工具，支持跨平台。
+专有的DSL，更高的可读性，可重用性高，可审查性高。
+高效的集群操作，易于管理，保证集群环境的一致性。">
+<meta name="twitter:image" content="https://s3.amazonaws.com/media-p.slid.es/uploads/111493/images/1870599/ansible_logo.png">
     
 
     
@@ -201,8 +240,7 @@
 </aside>
 
             
-            <section id="main">
-    <article id="post-Ansible基础知识" class="article article-type-post" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-Ansible基础知识" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -411,168 +449,32 @@
         </footer>
     </div>
     
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2016/06/15/AWS之IAM/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">Más viejo</strong>
+            <div class="article-nav-title"></div>
+        </a>
+    
+</nav>
+
+
+    
 </article>
 
 
-
-    <article id="post-AWS之IAM" class="article article-type-post" itemscope itemprop="blogPost">
-    <div class="article-inner">
-        
-        
-        
-        <div class="article-entry" itemprop="articleBody">
-        
-            
-            <hr>
-<h2 id="AWS之IAM"><a href="#AWS之IAM" class="headerlink" title="AWS之IAM"></a>AWS之IAM</h2><p>最近一段时间一直在学习AWS相关的东西，近两周把<a href="http://docs.aws.amazon.com/zh_cn/IAM/latest/UserGuide/introduction.html" target="_blank" rel="external">IAM</a>（Identity and Access Management）的文档过了一遍, 现在总结一下学到的东西。</p>
-<h3 id="IAM定义"><a href="#IAM定义" class="headerlink" title="IAM定义:"></a>IAM定义:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">IAM controls who can do what in your AWS account.</span><br></pre></td></tr></table></figure>
-<p><em>通过 IAM 可以控制哪些人可以使用您的 AWS 资源（身份验证）以及他们可以使用的资源和采用的方式（授权）。</em></p>
-<blockquote>
-<p>其实，这就和Linux的权限系统很相似，只是将对文件系统的操作换成了对AWS上的资源的操作。我们在注册成为AWS用户时所使用的账户就是就是我们根账户， 根账户就如同Linux上的root用户，能够对该用户在AWS上的所有资源进行完全、无限制的访问。我们一般不建议使用根账户去对AWS上的资源进行操作。</p>
-</blockquote>
-<h3 id="IAM能够做什么"><a href="#IAM能够做什么" class="headerlink" title="IAM能够做什么"></a>IAM能够做什么</h3><p>试想一下，有这样一个组织，这个组织当中的所有人都使用同一个AWS账户下的资源，如果所有人都使用根用户对AWS上的资源进行操作，这样会面临什么样的问题呢？</p>
-<blockquote>
-<p>这种做法带来的最直接也是最严重的问题就是<em>安全</em>方面的问题，数据被窃取，应用服务器被破坏，账户信息被泄露等等，这些安全问题可能来自于错误的操作，也可能来自于恶意的破坏。</p>
-</blockquote>
-<p>让我们来看看IAM为我们提供了哪些功能：</p>
-<ul>
-<li><p>对你 AWS 账户的共享访问权限</p>
-<blockquote>
-<p>可以向其他人员授予管理和使用你 AWS 账户中的资源的权限，而不必共享你的密码或访问密钥。</p>
-</blockquote>
-</li>
-<li><p>精细化权限</p>
-<blockquote>
-<p>可以针对不同资源向不同人员授予不同权限。同时，我们应当遵循授予最小权限这一标准的安全建议，即仅授予执行任务所需的最小权限。</p>
-</blockquote>
-</li>
-<li><p>与很多的AWS服务集成</p>
-<blockquote>
-<p>比如，可以控制 Amazon EC2 上运行的应用程序针对 AWS 资源的安全访问权限。</p>
-</blockquote>
-</li>
-</ul>
-<p><em>值得一提的是，IAM是一项可以免费使用的服务。</em></p>
-<p>你可以通过AWS 管理控制台（UI），命令行工具（aws cli）, 软件开发工具包 (sdk 编程式) 以及HTTPS API 使用IAM服务。</p>
-<h3 id="如何使用IAM"><a href="#如何使用IAM" class="headerlink" title="如何使用IAM"></a>如何使用IAM</h3><p>AWS提供了用户（users）、策略(policies)、群组（groups）和角色（roles）供AWS的客户来管理自己账号下的资源。</p>
-<h4 id="用户（users）"><a href="#用户（users）" class="headerlink" title="用户（users）"></a>用户（users）</h4><p>在AWS里，user本质上与Linux系统中的user是非常相似的概念。我们可以创建一个新的user，为其分配username和password，授予适当的权限，并在不再使用的时候将其删除.</p>
-<p>我们可以在账户中创建与组织中的用户对应的 IAM 用户，而不是与他人共享根账户凭证。</p>
-<p><em>IAM 用户不是单独的账户；它们是你账户中的用户。</em></p>
-<p>使用AWS CLI创建一个名为Bob的用户：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">aws iam create-user --user-name Bob</span><br><span class="line"></span><br><span class="line">//output</span><br><span class="line">&#123;</span><br><span class="line">    &quot;User&quot;: &#123;</span><br><span class="line">        &quot;UserName&quot;: &quot;Bob&quot;,</span><br><span class="line">        &quot;Path&quot;: &quot;/&quot;,</span><br><span class="line">        &quot;CreateDate&quot;: &quot;2016-06-19T09:03:47.313Z&quot;,</span><br><span class="line">        &quot;UserId&quot;: &quot;AIDAIHO123456789BAWNFO6&quot;,</span><br><span class="line">        &quot;Arn&quot;: &quot;arn:aws:iam::123456789:user/Bob&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>ARN是Amazon Resource Names的缩写，在AWS里，创建的任何资源有其全局唯一的ARN。</p>
-<h4 id="策略（policies）"><a href="#策略（policies）" class="headerlink" title="策略（policies）"></a>策略（policies）</h4><p>现在,我们已经创建了一个名为Bob的IAM user,但默认情况下Bob这名用户无法访问你在AWS中的任何资源.</p>
-<p>这时，我们就需要使用策略（policy）来对用户访问进行授权。简而言之，策略（policy）就是用来描述<em>谁在什么条件下能对哪些资源进行哪些操作</em>。在AWS中，策略（policies）被分为AWS管理的策略和客户自己管理的策略。我们可以使用JSON文档来描述一个策略，</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">//s3-mybucket-read-only.json</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">    &quot;Version&quot;: &quot;2012-10-17&quot;,</span><br><span class="line">    &quot;Statement&quot;: [</span><br><span class="line">        &#123;</span><br><span class="line">            &quot;Effect&quot;: &quot;Allow&quot;,</span><br><span class="line">            &quot;Action&quot;: [</span><br><span class="line">                &quot;s3:Get*&quot;,</span><br><span class="line">                &quot;s3:List*&quot;</span><br><span class="line">            ],</span><br><span class="line">            &quot;Resource&quot;: [</span><br><span class="line">                &quot;arn:aws:s3:::my-bucket/*&quot;</span><br><span class="line">            ]</span><br><span class="line">        &#125;,</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//通过这条命令创建一个名为s3-mybucket-read-only的policy</span><br><span class="line">aws iam create-policy --policy-name s3-mybucket-read-only --policy-document s3-mybucket-read-only.json</span><br></pre></td></tr></table></figure>
-<p>现在，我可以将创建好的这个policy附加到Bob这个user上，这样就能达到授权的目的。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">aws iam attach-user-policy --user-name Bob --policy-arn arn:aws:iam::0123456789012:policy/s3-mybucket-read-only</span><br></pre></td></tr></table></figure>
-<h4 id="群组（groups）"><a href="#群组（groups）" class="headerlink" title="群组（groups）"></a>群组（groups）</h4><p>Bob已经能够以只读的方式访问my-bucket这个存储桶里的资源了，但现在Bob的同事们也需要这个权限，我们当然可以一个一个的为他们授予这个权限，但这是一种很低效同时也很不便于管理的方式。我们可以使用群组（groups）来对Bob和他的同事进行管理。在AWS中，group的概念和Linux系统中group的概念也是很相似的，当你给一个group授权时，整个group里的user都会自动获得该权限；你将一个新用户添加到某一个group里，该用户也会自动获得该group拥有的权限。</p>
-<p>你可以根据你需要该组的用户执行的工作类型为组分配权限，然后将用户添加到该组。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">aws iam create-group --group-name s3-mybucket-read-only-group</span><br><span class="line"></span><br><span class="line">//output</span><br><span class="line">&#123;</span><br><span class="line">    &quot;Group&quot;: &#123;</span><br><span class="line">        &quot;Path&quot;: &quot;/&quot;,</span><br><span class="line">        &quot;CreateDate&quot;: &quot;2016-06-19T09:43:25.262Z&quot;,</span><br><span class="line">        &quot;GroupId&quot;: &quot;AGPAID1234567JKEVYLG&quot;,</span><br><span class="line">        &quot;Arn&quot;: &quot;arn:aws:iam::1234567890123:group/s3-mybucket-read-only-group&quot;,</span><br><span class="line">        &quot;GroupName&quot;: &quot;s3-mybucket-read-only-group&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//分配权限</span><br><span class="line">aws iam attach-group-policy --group-name s3-mybucket-read-only-group --policy-arn arn:aws:iam::0123456789012:policy/s3-mybucket-read-only</span><br><span class="line"></span><br><span class="line">//将Bob添加到s3-mybucket-read-only-group</span><br><span class="line">aws iam add-user-to-group --user-name Bob --group-name s3-mybucket-read-only-group</span><br></pre></td></tr></table></figure>
-<h4 id="角色（roles）"><a href="#角色（roles）" class="headerlink" title="角色（roles）"></a>角色（roles）</h4><p>IAM 角色 类似于用户，因为它是一个 AWS 实体，该实体具有确定其在 AWS 中可执行和不可执行的操作的权限策略。但是，角色旨在让需要它的任何人代入，而不是唯一地与某个人员关联。此外，<em>角色没有任何关联的凭证（密码或访问密钥）</em>。<br>我们可以使用角色向通常无权访问你的 AWS 资源的用户、应用程序或服务提供访问权限。</p>
-<p><img src="http://cdn.blog.celingest.com/wp-content/uploads/2014/02/AWS_IAM_Roles-512x343.png" alt="使用roles向 AWS 服务提供访问权限"></p>
-<h3 id="IAM-最佳实践"><a href="#IAM-最佳实践" class="headerlink" title="IAM 最佳实践"></a>IAM 最佳实践</h3><p>下面这些都是AWS官方提出的一些<a href="http://docs.aws.amazon.com/zh_cn/IAM/latest/UserGuide/best-practices.html" target="_blank" rel="external">最佳实践</a>：</p>
-<ul>
-<li>隐藏您的 AWS 账户（根）访问密钥</li>
-<li>创建单独的 IAM 用户</li>
-<li>使用组向 IAM 用户分配权限</li>
-<li>授予最小权限</li>
-<li>为您的用户配置强密码策略</li>
-<li>为特权用户启用 MFA</li>
-<li>针对在 Amazon EC2 实例上运行的应用程序使用角色</li>
-<li>通过使用角色而非共享证书来委托访问</li>
-<li>定期交替轮换证书</li>
-<li>删除不需要的证书</li>
-<li>使用策略条件来增强安全性</li>
-<li>监控 AWS 账户中的活动</li>
-</ul>
-<p>本文主要参考<a href="http://aws.amazon.com/cn/documentation/iam/" target="_blank" rel="external">AWS IAM官方文档</a>。</p>
-
-        
-        </div>
-        <footer class="article-footer">
-            <div class="share-container">
-
-
-
-</div>
-
-    <a data-url="http://yoursite.com/2016/06/15/AWS之IAM/" data-id="ciremj3cc0001l1x249js8zjo" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
-<script>
-    (function ($) {
-        // Prevent duplicate binding
-        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
-            __SHARE_BUTTON_BINDED__ = true;
-        } else {
-            return;
-        }
-        $('body').on('click', function() {
-            $('.article-share-box.on').removeClass('on');
-        }).on('click', '.article-share-link', function(e) {
-            e.stopPropagation();
-
-            var $this = $(this),
-                url = $this.attr('data-url'),
-                encodedUrl = encodeURIComponent(url),
-                id = 'article-share-box-' + $this.attr('data-id'),
-                offset = $this.offset(),
-                box;
-
-            if ($('#' + id).length) {
-                box = $('#' + id);
-
-                if (box.hasClass('on')){
-                    box.removeClass('on');
-                    return;
-                }
-            } else {
-                var html = [
-                    '<div id="' + id + '" class="article-share-box">',
-                        '<input class="article-share-input" value="' + url + '">',
-                        '<div class="article-share-links">',
-                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
-                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
-                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
-                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
-                        '</div>',
-                    '</div>'
-                ].join('');
-
-              box = $(html);
-
-              $('body').append(box);
-            }
-
-            $('.article-share-box.on').hide();
-
-            box.css({
-                top: offset.top + 25,
-                left: offset.left
-            }).addClass('on');
-
-        }).on('click', '.article-share-box', function (e) {
-            e.stopPropagation();
-        }).on('click', '.article-share-box-input', function () {
-            $(this).select();
-        }).on('click', '.article-share-box-link', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
-        });
-    })(jQuery);
-</script>
-
-            
     
-        <a href="http://yoursite.com/2016/06/15/AWS之IAM/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/06/15/AWS之IAM/">Comentarios</a>
+    <section id="comments">
     
-
-        </footer>
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
-    
-</article>
 
+    
+    </section>
 
 </section>
             
@@ -676,11 +578,13 @@
     var disqus_shortname = 'hexo-theme-icarus';
     
     
+    var disqus_url = 'http://yoursite.com/2016/08/02/Ansible基础知识/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
