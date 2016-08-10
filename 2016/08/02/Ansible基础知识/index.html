@@ -2,7 +2,7 @@
 <html lang=zh>
 <head>
     <meta charset="utf-8">
-
+    
     <title>Kai&#39;s Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="DEVOPS 工具篇之Ansible基础篇
@@ -53,11 +53,11 @@
 专有的DSL，更高的可读性，可重用性高，可审查性高。
 高效的集群操作，易于管理，保证集群环境的一致性。">
 <meta name="twitter:image" content="https://s3.amazonaws.com/media-p.slid.es/uploads/111493/images/1870599/ansible_logo.png">
+    
 
+    
 
-
-
-
+    
 
     <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="/vendor/open-sans/styles.css">
@@ -66,13 +66,13 @@
     <link rel="stylesheet" href="/css/style.css">
 
     <script src="/vendor/jquery/2.1.3/jquery.min.js"></script>
-
-
+    
+    
         <link rel="stylesheet" href="/vendor/fancybox/jquery.fancybox.css">
-
-
-
-
+    
+    
+    
+    
 
 </head>
 <body>
@@ -85,20 +85,20 @@
                 <span class="site-title">Kai&#39;s Blog</span>
             </a>
             <nav id="main-nav">
-
+                
                     <a class="main-nav-link" href="/.">Home</a>
-
+                
                     <a class="main-nav-link" href="/archives">Archives</a>
-
+                
                     <a class="main-nav-link" href="/categories">Categories</a>
-
+                
                     <a class="main-nav-link" href="/tags">Tags</a>
-
+                
                     <a class="main-nav-link" href="/about">About</a>
-
+                
             </nav>
-
-
+            
+                
                 <nav id="sub-nav">
                     <div class="profile" id="profile-nav">
                         <a id="profile-anchor" href="javascript:;">
@@ -107,11 +107,11 @@
                         </a>
                     </div>
                 </nav>
-
+            
             <div id="search-form-wrap">
 
     <form class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
         <button type="submit" class="search-form-submit"></button>
     </form>
     <div class="ins-search">
@@ -130,10 +130,10 @@
 (function (window) {
     var INSIGHT_CONFIG = {
         TRANSLATION: {
-            POSTS: 'Entradas',
+            POSTS: 'Posts',
             PAGES: 'Pages',
-            CATEGORIES: 'Categorias',
-            TAGS: 'Etiquetas',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
             UNTITLED: '(Untitled)',
         },
         ROOT_URL: '/',
@@ -150,21 +150,21 @@
     <div id="main-nav-mobile" class="header-sub header-inner">
         <table class="menu outer">
             <tr>
-
+                
                     <td><a class="main-nav-link" href="/.">Home</a></td>
-
+                
                     <td><a class="main-nav-link" href="/archives">Archives</a></td>
-
+                
                     <td><a class="main-nav-link" href="/categories">Categories</a></td>
-
+                
                     <td><a class="main-nav-link" href="/tags">Tags</a></td>
-
+                
                     <td><a class="main-nav-link" href="/about">About</a></td>
-
+                
                 <td>
-
+                    
     <div class="search-form">
-        <input type="text" class="ins-search-input search-form-input" placeholder="Buscar" />
+        <input type="text" class="ins-search-input search-form-input" placeholder="Search" />
     </div>
 
                 </td>
@@ -174,8 +174,8 @@
 </header>
 
         <div class="outer">
-
-
+            
+                
 
 <aside id="profile">
     <div class="inner profile-inner">
@@ -184,70 +184,70 @@
             <h2 id="name">Hu Kai</h2>
             <h3 id="title">Developer</h3>
             <span id="location"><i class="fa fa-map-marker"></i>Chengdu, China</span>
-            <a id="follow" target="_blank" href="https://github.com/WrongKey/">SEGUIR</a>
+            <a id="follow" target="_blank" href="https://github.com/WrongKey/">FOLLOW</a>
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
                 2
-                <span>Entradas</span>
+                <span>posts</span>
             </div>
             <div class="article-info-block">
                 0
-                <span>Etiqueta</span>
+                <span>tag</span>
             </div>
         </div>
-
+        
         <div class="profile-block social-links">
             <table>
                 <tr>
-
-
+                    
+                    
                     <td>
                         <a href="https://github.com/WrongKey/" target="_blank" title="github" class=tooltip>
                             <i class="fa fa-github"></i>
                         </a>
                     </td>
-
+                    
                     <td>
                         <a href="/" target="_blank" title="twitter" class=tooltip>
                             <i class="fa fa-twitter"></i>
                         </a>
                     </td>
-
+                    
                     <td>
                         <a href="/" target="_blank" title="facebook" class=tooltip>
                             <i class="fa fa-facebook"></i>
                         </a>
                     </td>
-
+                    
                     <td>
                         <a href="/" target="_blank" title="dribbble" class=tooltip>
                             <i class="fa fa-dribbble"></i>
                         </a>
                     </td>
-
+                    
                     <td>
                         <a href="/" target="_blank" title="rss" class=tooltip>
                             <i class="fa fa-rss"></i>
                         </a>
                     </td>
-
+                    
                 </tr>
             </table>
         </div>
-
+        
     </div>
 </aside>
 
-
+            
             <section id="main"><article id="post-Ansible基础知识" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
-
-
-
+        
+        
+        
         <div class="article-entry" itemprop="articleBody">
-
-
+        
+            
             <hr>
 <h2 id="DEVOPS-工具篇之Ansible基础篇"><a href="#DEVOPS-工具篇之Ansible基础篇" class="headerlink" title="DEVOPS 工具篇之Ansible基础篇"></a>DEVOPS 工具篇之Ansible基础篇</h2><hr>
 <h2 id="关于自动化配置工具"><a href="#关于自动化配置工具" class="headerlink" title="关于自动化配置工具"></a>关于自动化配置工具</h2><h3 id="使用传统方式-shell-bat-管理多主机集群存在的问题"><a href="#使用传统方式-shell-bat-管理多主机集群存在的问题" class="headerlink" title="使用传统方式(shell/bat)管理多主机集群存在的问题"></a>使用传统方式(shell/bat)管理多主机集群存在的问题</h3><ul>
@@ -279,10 +279,10 @@
 <thead>
 <tr>
 <th style="text-align:center">工具</th>
-<th style="text-align:center"><img src="https://s3.amazonaws.com/media-p.slid.es/uploads/111493/images/1870599/ansible_logo.png" width="100px" height="100px" alt="Ansible"></th>
-<th style="text-align:center"><img src="https://s3.amazonaws.com/media-p.slid.es/uploads/111493/images/1870740/Chef_Software_Inc._company_logo.png" width="100px" height="100px" alt="Chef"></th>
-<th style="text-align:center"><img src="https://s3.amazonaws.com/media-p.slid.es/uploads/111493/images/1870743/puppet-labs-logo.png" width="100px" height="100px"  alt="puppet labs"></th>
-<th style="text-align:center"><img src="https://s3.amazonaws.com/media-p.slid.es/uploads/111493/images/1870741/SaltStack.png" width="100px" height="100px"  alt="SALTSTACK"></th>
+<th style="text-align:center"><img src="https://s3.amazonaws.com/media-p.slid.es/uploads/111493/images/1870599/ansible_logo.png =100x100" alt="Ansible"></th>
+<th style="text-align:center"><img src="https://s3.amazonaws.com/media-p.slid.es/uploads/111493/images/1870740/Chef_Software_Inc._company_logo.png =100x100" alt="Chef"></th>
+<th style="text-align:center"><img src="https://s3.amazonaws.com/media-p.slid.es/uploads/111493/images/1870743/puppet-labs-logo.png =100x100" alt="puppet labs"></th>
+<th style="text-align:center"><img src="https://s3.amazonaws.com/media-p.slid.es/uploads/111493/images/1870741/SaltStack.png =100x100" alt="SALTSTACK"></th>
 </tr>
 </thead>
 <tbody>
@@ -335,7 +335,7 @@
 <p>如果有主机的SSH端口不是标准的22端口,可在主机名之后加上端口号,用冒号分隔.</p>
 <p>通过设置针对组或主机的参数,可以控制 ansible 与远程主机的交互方式。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[webserver]</span><br><span class="line">54.254.204.30 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=/Users/kdhu/Scripts/aws_secret_key.pem</span><br></pre></td></tr></table></figure>
-<p><img src="../../../../../../images/inventory.png" width="800px" height="400px"  alt="inventory"></p>
+<p><img src="../images/inventory.png =800x400" alt="inventory"></p>
 <h4 id="Module"><a href="#Module" class="headerlink" title="Module"></a>Module</h4><p>Ansible通过Module来对需要执行在不同主机上的任务进行一层抽象，可以一定程度屏蔽不同系统的差异。</p>
 <p>常用模块：</p>
 <ul>
@@ -346,7 +346,7 @@
 </ul>
 <p>使用ping模块来测试主机是否可访问。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ansible all -i inventory.ini -m  ping</span><br><span class="line"></span><br><span class="line">54.254.204.30 | SUCCESS =&gt; &#123;</span><br><span class="line">    &quot;changed&quot;: false,</span><br><span class="line">    &quot;ping&quot;: &quot;pong&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="../../../../../../images/ansible_module.png" width="800px" height="400px"  alt="module">    </p>
+<p><img src="../images/ansible_module.png =800x400" alt="module">    </p>
 <h4 id="ad-hoc命令"><a href="#ad-hoc命令" class="headerlink" title="ad-hoc命令"></a>ad-hoc命令</h4><p>假如我一时兴起，想去ping一下某一台服务器，我就直接敲ansible all -i inventory.ini -m  ping，这条命令不会被保存起来, 这样的命令就叫做 ad-hoc 命令.</p>
 <p>Ansible提供两种方式去完成任务,一是 ad-hoc 命令,一是写 Ansible playbook.前者可以解决一些简单的任务, 后者解决较复杂的任务.</p>
 <h4 id="Playbook"><a href="#Playbook" class="headerlink" title="Playbook"></a>Playbook</h4><p>Playbooks 与 adhoc 相比,是一种完全不同的运用 ansible 的方式,是非常之强大的.</p>
@@ -355,18 +355,18 @@
 <p>Play通常由name, hosts（指定在哪些主机上执行）,arguments(remote_user, sudo), varibles以及tasks。同时你也可以指定某个task只在某种条件下执行。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">- name: This is a Play</span><br><span class="line">  hosts: web-servers</span><br><span class="line">  remote_user: fred</span><br><span class="line">  sudo: yes</span><br><span class="line">  connection: ssh</span><br><span class="line">  vars:</span><br><span class="line">    http_port: 80</span><br><span class="line">    cache_dir: /opt/cache</span><br><span class="line"></span><br><span class="line">  tasks:</span><br><span class="line">    - name: create cache dir</span><br><span class="line">      file: path=&#123;&#123; cache_dir &#125;&#125; state=directory</span><br><span class="line"></span><br><span class="line">    - name: install apache</span><br><span class="line">      yum: name=httpd state=installed</span><br><span class="line">      when: ansible_os_family == &quot;RedHat&quot;</span><br></pre></td></tr></table></figure>
 <p><em>我是这样理解的，Playbook就是一个剧本，里面写了很多剧（Play）,每一个剧里面包含了很多需要我们的英雄(Ansible)要去执行的任务（Tasks）。</em></p>
-<p><img src="../../../../../../images/relationship.png" width="800px" height="600px"  alt="关系图"></p>
+<p><img src="../images/relationship.png =800x600" alt="关系图"></p>
 <p>下面是一个简单的Playbook，用来给指定主机安装Nginx。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">- hosts: webservers</span><br><span class="line">  sudo: yes</span><br><span class="line">  tasks:</span><br><span class="line">    - name: Install Nginx</span><br><span class="line">      apt:</span><br><span class="line">        name: nginx</span><br><span class="line">        update_cache: yes</span><br><span class="line">        state: present</span><br></pre></td></tr></table></figure>
 <p>运行命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ansible-playbook -i inventory.ini nginx-play.yaml</span><br></pre></td></tr></table></figure>
-<p><img src="../../../../../../images/playbook.png" width="600px" height="200px"  alt="playbook"></p>
+<p><img src="../images/playbook.png =600x200" alt="playbook"></p>
 <h5 id="handler"><a href="#handler" class="headerlink" title="handler"></a>handler</h5><p>Handlers也是一些task的列表,可以通过名字来引用,它们和一般的task并没有什么区别.Handlers是由通知者进行notify, 如果没有被notify,handlers不会执行.不管有多少个通知者进行了notify,等到play中的所有task执行完成之后,handlers也只会被执行一次，handlers会按照声明的顺序执行.</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">handlers:</span><br><span class="line">    - name: restart nginx</span><br><span class="line">      service:  name=nginx state=restarted</span><br></pre></td></tr></table></figure>
 <p>Handlers最佳的应用场景是用来重启服务,或者触发系统重启操作.</p>
 <p>未完待续。。。</p>
 
-
+        
         </div>
         <footer class="article-footer">
             <div class="share-container">
@@ -375,7 +375,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2016/08/02/Ansible基础知识/" data-id="ciremj3c70000l1x2nu17wmbj" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://yoursite.com/2016/08/02/Ansible基础知识/" data-id="cirom4t8o00017bx26pv8xwbs" class="article-share-link"><i class="fa fa-share"></i>Share</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -441,128 +441,128 @@
     })(jQuery);
 </script>
 
-
-
-        <a href="http://yoursite.com/2016/08/02/Ansible基础知识/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/08/02/Ansible基础知识/">Comentarios</a>
-
+            
+    
+        <a href="http://yoursite.com/2016/08/02/Ansible基础知识/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2016/08/02/Ansible基础知识/">Comments</a>
+    
 
         </footer>
     </div>
-
-
+    
+        
 <nav id="article-nav">
-
-
+    
+    
         <a href="/2016/06/15/AWS之IAM/" id="article-nav-older" class="article-nav-link-wrap">
-            <strong class="article-nav-caption">Más viejo</strong>
+            <strong class="article-nav-caption">Older</strong>
             <div class="article-nav-title"></div>
         </a>
-
+    
 </nav>
 
 
-
+    
 </article>
 
 
-
+    
     <section id="comments">
-
-
+    
+        
     <div id="disqus_thread">
         <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
 
-
+    
     </section>
 
 </section>
-
+            
                 <aside id="sidebar">
-
-
+   
+        
     <div class="widget-wrap">
-        <h3 class="widget-title">Recientes</h3>
+        <h3 class="widget-title">recent</h3>
         <div class="widget">
             <ul id="recent-post" class="">
-
+                
                     <li>
-
+                        
                         <div class="item-thumbnail">
                             <a href="/2016/08/02/Ansible基础知识/" class="thumbnail">
-
-
+    
+    
         <span style="background-image:url(https://s3.amazonaws.com/media-p.slid.es/uploads/111493/images/1870599/ansible_logo.png)" alt="" class="thumbnail-image"></span>
-
+    
 </a>
 
                         </div>
-
+                        
                         <div class="item-inner">
                             <p class="item-category"></p>
                             <p class="item-title"><a href="/2016/08/02/Ansible基础知识/" class="title"></a></p>
                             <p class="item-date"><time datetime="2016-08-02T12:46:24.000Z" itemprop="datePublished">2016-08-02</time></p>
                         </div>
                     </li>
-
+                
                     <li>
-
+                        
                         <div class="item-thumbnail">
                             <a href="/2016/06/15/AWS之IAM/" class="thumbnail">
-
-
+    
+    
         <span style="background-image:url(http://cdn.blog.celingest.com/wp-content/uploads/2014/02/AWS_IAM_Roles-512x343.png)" alt="" class="thumbnail-image"></span>
-
+    
 </a>
 
                         </div>
-
+                        
                         <div class="item-inner">
                             <p class="item-category"></p>
                             <p class="item-title"><a href="/2016/06/15/AWS之IAM/" class="title"></a></p>
                             <p class="item-date"><time datetime="2016-06-15T01:11:07.000Z" itemprop="datePublished">2016-06-15</time></p>
                         </div>
                     </li>
-
+                
             </ul>
         </div>
     </div>
 
-
-
-
-
+    
+        
+    
+        
     <div class="widget-wrap">
-        <h3 class="widget-title">Archivos</h3>
+        <h3 class="widget-title">archives</h3>
         <div class="widget">
             <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">June 2016</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
-
-
-
-
-
-
+    
+        
+    
+        
+    
+        
     <div class="widget-wrap widget-list">
-        <h3 class="widget-title">Links</h3>
+        <h3 class="widget-title">links</h3>
         <div class="widget">
             <ul>
-
+                
                     <li>
                         <a href="http://hexo.io">Hexo</a>
                     </li>
-
+                
             </ul>
         </div>
     </div>
 
 
-
+    
     <div id="toTop" class="fa fa-angle-up"></div>
 </aside>
-
+            
         </div>
         <footer id="footer">
     <div class="outer">
@@ -572,14 +572,14 @@
         </div>
     </div>
 </footer>
-
-
+        
+    
     <script>
     var disqus_shortname = 'hexo-theme-icarus';
-
-
+    
+    
     var disqus_url = 'http://yoursite.com/2016/08/02/Ansible基础知识/';
-
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
@@ -591,9 +591,9 @@
 
 
 
-
+    
         <script src="/vendor/fancybox/jquery.fancybox.pack.js"></script>
-
+    
 
 
 <!-- Custom Scripts -->
