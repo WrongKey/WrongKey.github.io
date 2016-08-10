@@ -297,7 +297,7 @@
 <p>如果有主机的SSH端口不是标准的22端口,可在主机名之后加上端口号,用冒号分隔.</p>
 <p>通过设置针对组或主机的参数,可以控制 ansible 与远程主机的交互方式。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[webserver]</span><br><span class="line">54.254.204.30 ansible_ssh_user=ubuntu ansible_ssh_private_key_file=/Users/kdhu/Scripts/aws_secret_key.pem</span><br></pre></td></tr></table></figure>
-<p><img src="../images/inventory.png =800x400" alt="inventory"></p>
+<p><img src="../images/inventory.png" alt="inventory"></p>
 <h4 id="Module"><a href="#Module" class="headerlink" title="Module"></a>Module</h4><p>Ansible通过Module来对需要执行在不同主机上的任务进行一层抽象，可以一定程度屏蔽不同系统的差异。</p>
 <p>常用模块：</p>
 <ul>
